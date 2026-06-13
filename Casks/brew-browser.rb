@@ -15,14 +15,11 @@ cask "brew-browser" do
   # so `brew upgrade --cask` users stay current (Homebrew 5.2.0+
   # auto-upgrades auto_updates casks when the tap version is newer).
   #
-  # depends_on macos ">= :ventura" (Ventura or newer), NOT the bare
-  # `:ventura` symbol — the symbol pins to Ventura *exactly* and would
-  # block Sonoma/Sequoia/Tahoe. `brew style --fix` rewrites this to the
-  # symbol; do not accept that autocorrect, it changes the meaning.
+  # depends_on macos: :ventura declares Ventura or newer on Homebrew 6.0+.
+  # Add `depends_on maximum_macos:` separately if an upper bound is ever needed.
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: ">= :ventura"
-
+  depends_on macos: :ventura
   app "brew-browser.app"
 
   zap trash: [
