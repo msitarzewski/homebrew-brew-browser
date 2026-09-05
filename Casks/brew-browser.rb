@@ -5,8 +5,7 @@ cask "brew-browser" do
   sha256 arm:   "a0fb3474e24837d544976f15938372d7462792ccb2f1534dcde492ea9bf98612",
          intel: "65944c5bb011d2fd84c2f90a8190d06fc7beaf86a2ed2225ae9b048f2c59bda1"
 
-  url "https://github.com/msitarzewski/brew-browser/releases/download/v#{version}/brew-browser_#{version}_#{arch}.dmg",
-      verified: "github.com/msitarzewski/brew-browser/"
+  url "https://github.com/msitarzewski/brew-browser/releases/download/v#{version}/brew-browser_#{version}_#{arch}.dmg"
   name "brew-browser"
   desc "Native GUI for Homebrew"
   homepage "https://brew-browser.zerologic.com/"
